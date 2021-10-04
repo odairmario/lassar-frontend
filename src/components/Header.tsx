@@ -28,8 +28,8 @@ function ToggleDarkMode() {
 }
 function Header(prop: header_props) {
   return (
-		<Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+		<Box sx={{ flexGrow: 1 }} >
+      <AppBar  position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             {prop.title}
