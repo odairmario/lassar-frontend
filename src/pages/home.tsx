@@ -42,7 +42,6 @@ function ListRecords() {
 }
 function HomePage() {
   const [new_search,setNewSearch] = React.useState("")
-  const {records,deleteRecord} = React.useContext(RecordContext) as RecordContextType;
   const {subscriber} = React.useContext(WebSocketContext)as WebSocketContextType;
   React.useEffect(()=>{
       if (new_search.length !== 0) 

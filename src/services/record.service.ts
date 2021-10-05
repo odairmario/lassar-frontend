@@ -1,5 +1,5 @@
 import http from "../http-common";
-import {IRecordRequestData,IRecord} from "../types/record.type";
+import {IRecordRequestData} from "../types/record.type";
 
 class RecordDataService {
     search(data: IRecordRequestData) {
