@@ -2,6 +2,33 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Deploy
+To deploy application follow the steps:
+### Step 1: Change API entrypoint
+Edit `src/constants.tsx` and change API entrypoint. Example:
+```tsx
+export const API_URL="http://bbb.c3sl.ufpr.br/download/api"
+export const WEBSOCKET_ADDRESS="ws://bbb.c3sl.ufpr.br/download/api"
+```
+### Step 2: build application
+#### Step 2.1 Set public_url
+before build application we need set base url from frontend, just set the following environment variable:
+```
+export PUBLIC_URL=/download
+```
+#### Step 2.2: Build
+To build application run the following command:
+```
+yarn build
+```
+### Step 3: Copy builded app to /var/www/lassar
+```
+cp -a build/  /var/www/lassar
+```
+### Step 4: Configure nginx
+on ./nginx/lassar has a configuration template, you can use as base.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
