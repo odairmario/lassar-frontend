@@ -1,6 +1,6 @@
 import React from 'react';
 import RecordContext from '../contexts/RecordContext'
-import {RecordContextType,IRecord,RecordStatusEnum} from '../types/record.type'
+import {IRecord,RecordStatusEnum} from '../types/record.type'
 
 export const RecordProvider: React.FC<React.ReactNode> = ({children})=> {
     const [records,setRecords] = React.useState<IRecord[]>([]);

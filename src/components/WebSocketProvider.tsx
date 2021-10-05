@@ -1,6 +1,5 @@
 import React from 'react';
 import {WebSocketContext} from '../contexts/WebSocket';
-import {WebSocketContextType}  from '../types/websocket.type';
 import {RecordContextType,IRecord} from '../types/record.type';
 import RecordContext from '../contexts/RecordContext'
 import {WEBSOCKET_ADDRESS} from '../constants'
