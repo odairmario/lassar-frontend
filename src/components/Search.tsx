@@ -22,6 +22,7 @@ export default function SearchBar(props:search_bar_props) {
       RecordDataService.search(request_data).then((response)=>{
           const response_data: IRecord = response.data;
           props.handle_submit(response_data.meeting_id);
+	  setValue("")
         })
 
     }}>                                                                                                                                                                           
