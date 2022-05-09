@@ -18,13 +18,15 @@ export default function SearchBar(props:search_bar_props) {
       const request_data: IRecordRequestData = {
         url: value
       }
-      props.handle_submit(value);
       RecordDataService.search(request_data).then((response)=>{
           const response_data: IRecord = response.data;
           props.handle_submit(response_data.meeting_id);
 	  setValue("")
         })
-
+        .catch(error => {
+          //console.log(error);
+        })
+        setValue("");
     }}>                                                                                                                                                                           
     <TextField                                                                                                                                                                                                                           
     onChange={(e) => setValue(e.target.value) } 
